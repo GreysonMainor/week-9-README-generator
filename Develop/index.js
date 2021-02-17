@@ -25,8 +25,14 @@ const questions = [
         name: "description"
     },
     {
-        type: "input",
+        type: "checkbox",
         message: "What kind of license should your project have?",
+        choices: [
+            "MIT",
+            "Apache",
+            "GPL",
+            "None"
+        ],
         name: "license"
     },
     {
@@ -52,10 +58,22 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) { 
+    fs.writeFile(fileName,data, function(err) {
+        if (err){
+            return console.log(err);
+        } else
+       return console.log ("SUCCESS")
+    })
+}
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    inquirer.prompt(questions)
+    .then(function(data){
+        writeToFile("README.md", generateMarkdown(data));
+    })
+ }
 
 // Function call to initialize app
 init();
