@@ -29,7 +29,6 @@ function generateMarkdown(data) {
 
 ## Installation
 
-${data.description}
 
 \`\`\`
 ${data.install}
@@ -55,10 +54,12 @@ To run tests, run the following command:
 ${data.tests}
 \`\`\`
 
-##Questions
+## Questions
 
-${data.github}
+### Github:
+github.com/${data.github}
 
+### Email:
 ${data.email}
   `;
 }
