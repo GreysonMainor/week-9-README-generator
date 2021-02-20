@@ -2,6 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown")
+//const writeFileAsync = util.promisify(fs.writeFile)
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -29,8 +30,8 @@ const questions = [
         message: "What kind of license should your project have?",
         choices: [
             "MIT",
-            "Apache",
-            "GPL",
+            "Apache 2.0",
+            "GNU GPL v3.0",
             "None"
         ],
         name: "license"
@@ -57,6 +58,7 @@ const questions = [
     },
 ];
 
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { 
     fs.writeFile(fileName,data, function(err) {
@@ -71,7 +73,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(data){
-        writeToFile("README.md", generateMarkdown(data));
+        writeToFile("DEMO-README.md", generateMarkdown(data));
     })
  }
 
