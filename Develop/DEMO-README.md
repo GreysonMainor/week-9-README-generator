@@ -1,11 +1,11 @@
 # Good README generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)]
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 
 
   ## Description
-  This project generates a read me based off of user input.
+  This project creates a read me based off of user input.
 
   ## Table of contents
 
@@ -23,7 +23,6 @@
 
 ## Installation
 
-This project generates a read me based off of user input.
 
 ```
 npm i
@@ -31,7 +30,7 @@ npm i
 
 ## Usage
 
-Repo is runnable in node js through the inquirer package
+Download inquirer to populate questions in the terminal.  run using node.js
 
 ## License
 
@@ -39,7 +38,7 @@ Repo is runnable in node js through the inquirer package
 
 
 ## Contributing
-keep it funky
+Keep it funky
 
 ## Tests
 
@@ -49,9 +48,11 @@ To run tests, run the following command:
 npm run test
 ```
 
-##Questions
+## Questions
 
-GreysonMainor
+### Github:
+github.com/GreysonMainor
 
+### Email:
 gbmainor98@outlook.com
   
